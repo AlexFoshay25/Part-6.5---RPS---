@@ -33,9 +33,9 @@
             this.lblPlayer = new System.Windows.Forms.Label();
             this.lblOpponent = new System.Windows.Forms.Label();
             this.grpPlayerChoice = new System.Windows.Forms.GroupBox();
-            this.radRock = new System.Windows.Forms.RadioButton();
-            this.radPaper = new System.Windows.Forms.RadioButton();
             this.radScissors = new System.Windows.Forms.RadioButton();
+            this.radPaper = new System.Windows.Forms.RadioButton();
+            this.radRock = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.grpPlayerChoice.SuspendLayout();
@@ -93,16 +93,17 @@
             this.grpPlayerChoice.TabStop = false;
             this.grpPlayerChoice.Text = "Player 1\'s Choice";
             // 
-            // radRock
+            // radScissors
             // 
-            this.radRock.AutoSize = true;
-            this.radRock.Location = new System.Drawing.Point(7, 20);
-            this.radRock.Name = "radRock";
-            this.radRock.Size = new System.Drawing.Size(51, 17);
-            this.radRock.TabIndex = 0;
-            this.radRock.TabStop = true;
-            this.radRock.Text = "Rock";
-            this.radRock.UseVisualStyleBackColor = true;
+            this.radScissors.AutoSize = true;
+            this.radScissors.Location = new System.Drawing.Point(7, 68);
+            this.radScissors.Name = "radScissors";
+            this.radScissors.Size = new System.Drawing.Size(64, 17);
+            this.radScissors.TabIndex = 2;
+            this.radScissors.TabStop = true;
+            this.radScissors.Text = "Scissors";
+            this.radScissors.UseVisualStyleBackColor = true;
+            this.radScissors.CheckedChanged += new System.EventHandler(this.radScissors_CheckedChanged);
             // 
             // radPaper
             // 
@@ -114,17 +115,19 @@
             this.radPaper.TabStop = true;
             this.radPaper.Text = "Paper";
             this.radPaper.UseVisualStyleBackColor = true;
+            this.radPaper.CheckedChanged += new System.EventHandler(this.radPaper_CheckedChanged);
             // 
-            // radScissors
+            // radRock
             // 
-            this.radScissors.AutoSize = true;
-            this.radScissors.Location = new System.Drawing.Point(7, 68);
-            this.radScissors.Name = "radScissors";
-            this.radScissors.Size = new System.Drawing.Size(64, 17);
-            this.radScissors.TabIndex = 2;
-            this.radScissors.TabStop = true;
-            this.radScissors.Text = "Scissors";
-            this.radScissors.UseVisualStyleBackColor = true;
+            this.radRock.AutoSize = true;
+            this.radRock.Location = new System.Drawing.Point(7, 20);
+            this.radRock.Name = "radRock";
+            this.radRock.Size = new System.Drawing.Size(51, 17);
+            this.radRock.TabIndex = 0;
+            this.radRock.TabStop = true;
+            this.radRock.Text = "Rock";
+            this.radRock.UseVisualStyleBackColor = true;
+            this.radRock.CheckedChanged += new System.EventHandler(this.radRock_CheckedChanged);
             // 
             // Form1
             // 

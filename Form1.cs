@@ -16,5 +16,20 @@ namespace Part_6._5____RPS
         {
             InitializeComponent();
         }
+
+        private void radRock_CheckedChanged(object sender, EventArgs e)
+        {
+            imgPlayer.Image = Properties.Resources.unnamed__1_;
+        }
+
+        private void radPaper_CheckedChanged(object sender, EventArgs e)
+        {
+            imgPlayer.Image = Properties.Resources.paper;
+        }
+
+        private void radScissors_CheckedChanged(object sender, EventArgs e)
+        {
+            imgPlayer.Image = Properties.Resources.unnamed;
+        }
     }
 }
