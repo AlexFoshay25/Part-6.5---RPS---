@@ -92,5 +92,20 @@
   <ItemGroup>
     <None Include="unnamed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ready %281%29.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="black-and-white-user-question-symbol-faq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="question-mark-symbol-sign-computer-icons-png-favpng-T3t3e8dw8dHkGeyPW3MKvVewM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="symbol_questionmark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
