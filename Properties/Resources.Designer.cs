@@ -63,9 +63,29 @@ namespace Part_6._5____RPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NA {
+            get {
+                object obj = ResourceManager.GetObject("NA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Paper {
             get {
                 object obj = ResourceManager.GetObject("Paper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap questionmark {
+            get {
+                object obj = ResourceManager.GetObject("questionmark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +103,9 @@ namespace Part_6._5____RPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap symbol_questionmark {
+        internal static System.Drawing.Bitmap Rock {
             get {
-                object obj = ResourceManager.GetObject("symbol_questionmark", resourceCulture);
+                object obj = ResourceManager.GetObject("Rock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,9 @@ namespace Part_6._5____RPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unnamed {
+        internal static System.Drawing.Bitmap Scissors {
             get {
-                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
+                object obj = ResourceManager.GetObject("Scissors", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,29 +123,9 @@ namespace Part_6._5____RPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unnamed__1_ {
+        internal static System.Drawing.Bitmap Tie {
             get {
-                object obj = ResourceManager.GetObject("unnamed__1_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed__2_ {
-            get {
-                object obj = ResourceManager.GetObject("unnamed__2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed__3_ {
-            get {
-                object obj = ResourceManager.GetObject("unnamed__3_", resourceCulture);
+                object obj = ResourceManager.GetObject("Tie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
