@@ -18,6 +18,8 @@ namespace Part_6._5____RPS
         int win;
         int lose;
         int tie;
+        double money;
+        double playermoney;
 
         public Form1()
         {
@@ -63,82 +65,184 @@ namespace Part_6._5____RPS
             //2 = Paper
             //3 = Scissors
 
+            money = Convert.ToDouble(txtBetAmt.Text);
+
+            playermoney = Convert.ToDouble(lblMoneyTotal.Text);
+
             computerNum = generator.Next(1, 4);
 
-            if (computerNum == 1)
+            if (money <= playermoney)
             {
-                imgOpponent.Image = Properties.Resources.Rock;
-            }
-            else if (computerNum == 2)
-            {
-                imgOpponent.Image = Properties.Resources.Paper;
-            }
-            else if (computerNum == 3)
-            {
-                imgOpponent.Image = Properties.Resources.Scissors;
-            }
+                if (computerNum == 1)
+                {
+                    imgOpponent.Image = Properties.Resources.Rock;
+                }
+                else if (computerNum == 2)
+                {
+                    imgOpponent.Image = Properties.Resources.Paper;
+                }
+                else if (computerNum == 3)
+                {
+                    imgOpponent.Image = Properties.Resources.Scissors;
+                }
 
-            if (computerNum == 1 && radPaper.Checked == true)
-            {
-                lblWin.Text = "You Win!";
-                win += 1;
-                lblWinBor.Text = win + "";
-            }
-            else if (computerNum == 1 && radScissor.Checked == true)
-            {
-                lblWin.Text = "You Lose!";
-                lose += 1;
-                lblLoseBor.Text = lose + "";
-            }
-            else if (computerNum == 1 && radRock.Checked == true)
-            {
-                lblWin.Text = "It's a Tie!";
-                tie += 1;
-                lblTieBor.Text = tie + "";
-            }
+                if (computerNum == 1 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "You Win!";
+                    win += 1;
+                    playermoney = playermoney + money * 2;
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 1 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "You Lose!";
+                    lose += 1;
+                    playermoney = playermoney - money * 2;
+                    lblLoseBor.Text = lose + "";
+                }
+                else if (computerNum == 1 && radRock.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie!";
+                    tie += 1;
+                    playermoney = playermoney + 0;
+                    lblTieBor.Text = tie + "";
+                }
 
-            if (computerNum == 2 && radPaper.Checked == true)
-            {
-                lblWin.Text = "It's a Tie!";
-                tie += 1;
-                lblTieBor.Text = tie + "";
-            }
-            else if (computerNum == 2 && radScissor.Checked == true)
-            {
-                lblWin.Text = "You Win!";
-                win += 1;
-                lblWinBor.Text = win + "";
-            }
-            else if (computerNum == 2 && radRock.Checked == true)
-            {
-                lblWin.Text = "You Lose!";
-                lose += 1;
-                lblLoseBor.Text = lose + "";
-            }
+                if (computerNum == 2 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie!";
+                    tie += 1;
+                    playermoney = playermoney + 0;
+                    lblTieBor.Text = tie + "";
+                }
+                else if (computerNum == 2 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "You Win!";
+                    win += 1;
+                    playermoney = playermoney + money * 2;
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 2 && radRock.Checked == true)
+                {
+                    lblWin.Text = "You Lose!";
+                    lose += 1;
+                    playermoney = playermoney - money * 2;
+                    lblLoseBor.Text = lose + "";
+                }
 
-            if (computerNum == 3 && radScissor.Checked == true)
-            {
-                lblWin.Text = "It's a Tie!";
-                tie += 1;
-                lblTieBor.Text = tie + "";
+                if (computerNum == 3 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie!";
+                    tie += 1;
+                    playermoney = playermoney + 0;
+                    lblTieBor.Text = tie + "";
+                }
+                else if (computerNum == 3 && radRock.Checked == true)
+                {
+                    lblWin.Text = "You Win!";
+                    win += 1;
+                    playermoney = playermoney + money * 2;
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 3 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "You Lose!";
+                    lose += 1;
+                    playermoney = playermoney - money * 2;
+                    lblLoseBor.Text = lose + "";
+                }
+
             }
-            else if (computerNum == 3 && radRock.Checked == true)
+            else if (money < 0) ;
             {
-                lblWin.Text = "You Win!";
-                win += 1;
-                lblWinBor.Text = win + "";
+                if (computerNum == 1)
+                {
+                    imgOpponent.Image = Properties.Resources.Rock;
+                }
+                else if (computerNum == 2)
+                {
+                    imgOpponent.Image = Properties.Resources.Paper;
+                }
+                else if (computerNum == 3)
+                {
+                    imgOpponent.Image = Properties.Resources.Scissors;
+                }
+
+                if (computerNum == 1 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "You Win! (No Bet)";
+                    win += 1;
+                    
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 1 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "You Lose! (No Bet)";
+                    lose += 1;
+                    
+                    lblLoseBor.Text = lose + "";
+                }
+                else if (computerNum == 1 && radRock.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie! (No Bet)";
+                    tie += 1;
+                    
+                    lblTieBor.Text = tie + "";
+                }
+
+                if (computerNum == 2 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie! (No Bet)";
+                    tie += 1;
+                    
+                    lblTieBor.Text = tie + "";
+                }
+                else if (computerNum == 2 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "You Win! (No Bet)";
+                    win += 1;
+                    
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 2 && radRock.Checked == true)
+                {
+                    lblWin.Text = "You Lose! (No Bet)";
+                    lose += 1;
+                    
+                    lblLoseBor.Text = lose + "";
+                }
+
+                if (computerNum == 3 && radScissor.Checked == true)
+                {
+                    lblWin.Text = "It's a Tie! (No Bet)";
+                    tie += 1;
+                    
+                    lblTieBor.Text = tie + "";
+                }
+                else if (computerNum == 3 && radRock.Checked == true)
+                {
+                    lblWin.Text = "You Win! (No Bet)";
+                    win += 1;
+                    lblWinBor.Text = win + "";
+                }
+                else if (computerNum == 3 && radPaper.Checked == true)
+                {
+                    lblWin.Text = "You Lose! (No Bet)";
+                    lose += 1;
+                    lblLoseBor.Text = lose + "";
+                }
             }
-            else if (computerNum == 3 && radPaper.Checked == true)
-            {
-                lblWin.Text = "You Lose!";
-                lose += 1;
-                lblLoseBor.Text = lose + "";
-            }
+            
 
 
-           
-    }
 
-       
+
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,6 +45,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.txtBetAmt = new System.Windows.Forms.TextBox();
+            this.lblBettingAmt = new System.Windows.Forms.Label();
+            this.lblMoneyTotal = new System.Windows.Forms.Label();
             this.grpPlayerChoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
@@ -229,11 +234,64 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Tie";
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(12, 13);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(202, 24);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "Rock Paper Scissors";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoney.Location = new System.Drawing.Point(714, 9);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(66, 20);
+            this.lblMoney.TabIndex = 15;
+            this.lblMoney.Text = "Money:";
+            // 
+            // txtBetAmt
+            // 
+            this.txtBetAmt.Location = new System.Drawing.Point(354, 382);
+            this.txtBetAmt.Name = "txtBetAmt";
+            this.txtBetAmt.Size = new System.Drawing.Size(91, 20);
+            this.txtBetAmt.TabIndex = 16;
+            // 
+            // lblBettingAmt
+            // 
+            this.lblBettingAmt.AutoSize = true;
+            this.lblBettingAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBettingAmt.Location = new System.Drawing.Point(270, 385);
+            this.lblBettingAmt.Name = "lblBettingAmt";
+            this.lblBettingAmt.Size = new System.Drawing.Size(78, 13);
+            this.lblBettingAmt.TabIndex = 17;
+            this.lblBettingAmt.Text = "Place A Bet:";
+            // 
+            // lblMoneyTotal
+            // 
+            this.lblMoneyTotal.AutoSize = true;
+            this.lblMoneyTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoneyTotal.Location = new System.Drawing.Point(724, 29);
+            this.lblMoneyTotal.Name = "lblMoneyTotal";
+            this.lblMoneyTotal.Size = new System.Drawing.Size(31, 15);
+            this.lblMoneyTotal.TabIndex = 18;
+            this.lblMoneyTotal.Text = "100";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMoneyTotal);
+            this.Controls.Add(this.lblBettingAmt);
+            this.Controls.Add(this.txtBetAmt);
+            this.Controls.Add(this.lblMoney);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -278,6 +336,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.TextBox txtBetAmt;
+        private System.Windows.Forms.Label lblBettingAmt;
+        private System.Windows.Forms.Label lblMoneyTotal;
     }
 }
 
