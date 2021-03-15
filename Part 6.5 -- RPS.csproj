@@ -110,5 +110,29 @@
   <ItemGroup>
     <None Include="Paper.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DollarSign.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-46096_codes-for-insertion-dollar-sign-white-png-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kissclipart-dollar-sign-png-clipart-dollar-sign-united-states-9d10bba94ca8673d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36-363115_green-dollar-symbol-png-transparent-image-green-dollar-sign-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

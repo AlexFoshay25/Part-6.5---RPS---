@@ -20,6 +20,7 @@ namespace Part_6._5____RPS
         int tie;
         double money;
         double playermoney;
+        double zero;
 
         public Form1()
         {
@@ -65,14 +66,23 @@ namespace Part_6._5____RPS
             //2 = Paper
             //3 = Scissors
 
+            zero = 0;
+
+            money = 0;
+
+            playermoney = 100;
+
             money = Convert.ToDouble(txtBetAmt.Text);
 
             playermoney = Convert.ToDouble(lblMoneyTotal.Text);
 
             computerNum = generator.Next(1, 4);
 
-            if (money <= playermoney)
+            if (money <= playermoney) 
             {
+                if (money < zero)
+                    money = 0;
+
                 if (computerNum == 1)
                 {
                     imgOpponent.Image = Properties.Resources.Rock;
@@ -92,13 +102,15 @@ namespace Part_6._5____RPS
                     win += 1;
                     playermoney = playermoney + money * 2;
                     lblWinBor.Text = win + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 1 && radScissor.Checked == true)
                 {
                     lblWin.Text = "You Lose!";
                     lose += 1;
-                    playermoney = playermoney - money * 2;
+                    playermoney = playermoney - money;
                     lblLoseBor.Text = lose + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 1 && radRock.Checked == true)
                 {
@@ -106,6 +118,7 @@ namespace Part_6._5____RPS
                     tie += 1;
                     playermoney = playermoney + 0;
                     lblTieBor.Text = tie + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
 
                 if (computerNum == 2 && radPaper.Checked == true)
@@ -114,6 +127,7 @@ namespace Part_6._5____RPS
                     tie += 1;
                     playermoney = playermoney + 0;
                     lblTieBor.Text = tie + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 2 && radScissor.Checked == true)
                 {
@@ -121,13 +135,15 @@ namespace Part_6._5____RPS
                     win += 1;
                     playermoney = playermoney + money * 2;
                     lblWinBor.Text = win + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 2 && radRock.Checked == true)
                 {
                     lblWin.Text = "You Lose!";
                     lose += 1;
-                    playermoney = playermoney - money * 2;
+                    playermoney = playermoney - money;
                     lblLoseBor.Text = lose + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
 
                 if (computerNum == 3 && radScissor.Checked == true)
@@ -136,6 +152,7 @@ namespace Part_6._5____RPS
                     tie += 1;
                     playermoney = playermoney + 0;
                     lblTieBor.Text = tie + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 3 && radRock.Checked == true)
                 {
@@ -143,17 +160,20 @@ namespace Part_6._5____RPS
                     win += 1;
                     playermoney = playermoney + money * 2;
                     lblWinBor.Text = win + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 3 && radPaper.Checked == true)
                 {
                     lblWin.Text = "You Lose!";
                     lose += 1;
-                    playermoney = playermoney - money * 2;
+                    playermoney = playermoney - money;
                     lblLoseBor.Text = lose + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
 
             }
-            else if (money < 0) ;
+
+            if (money <= zero)
             {
                 if (computerNum == 1)
                 {
@@ -171,66 +191,66 @@ namespace Part_6._5____RPS
                 if (computerNum == 1 && radPaper.Checked == true)
                 {
                     lblWin.Text = "You Win! (No Bet)";
-                    win += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblWinBor.Text = win + "";
                 }
                 else if (computerNum == 1 && radScissor.Checked == true)
                 {
                     lblWin.Text = "You Lose! (No Bet)";
-                    lose += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblLoseBor.Text = lose + "";
                 }
                 else if (computerNum == 1 && radRock.Checked == true)
                 {
                     lblWin.Text = "It's a Tie! (No Bet)";
-                    tie += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblTieBor.Text = tie + "";
                 }
 
                 if (computerNum == 2 && radPaper.Checked == true)
                 {
                     lblWin.Text = "It's a Tie! (No Bet)";
-                    tie += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblTieBor.Text = tie + "";
                 }
                 else if (computerNum == 2 && radScissor.Checked == true)
                 {
                     lblWin.Text = "You Win! (No Bet)";
-                    win += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblWinBor.Text = win + "";
                 }
                 else if (computerNum == 2 && radRock.Checked == true)
                 {
                     lblWin.Text = "You Lose! (No Bet)";
-                    lose += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblLoseBor.Text = lose + "";
                 }
 
                 if (computerNum == 3 && radScissor.Checked == true)
                 {
                     lblWin.Text = "It's a Tie! (No Bet)";
-                    tie += 1;
-                    
+                    lblMoneyTotal.Text = $"{playermoney}";
                     lblTieBor.Text = tie + "";
                 }
                 else if (computerNum == 3 && radRock.Checked == true)
                 {
                     lblWin.Text = "You Win! (No Bet)";
-                    win += 1;
                     lblWinBor.Text = win + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
                 else if (computerNum == 3 && radPaper.Checked == true)
                 {
                     lblWin.Text = "You Lose! (No Bet)";
-                    lose += 1;
                     lblLoseBor.Text = lose + "";
+                    lblMoneyTotal.Text = $"{playermoney}";
                 }
+            }
+
+            if (playermoney <= zero)
+            {
+                lblBankrupt.Text = $"No Money Left - No More Bets Allowed";
+                lblInfo.Text = $"Restart Game To Replenish Bank";
+                lblInfo2.Text = $"- Bet With '$0' to Continue Playing -";
             }
             
 
@@ -241,6 +261,16 @@ namespace Part_6._5____RPS
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

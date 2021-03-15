@@ -63,6 +63,16 @@ namespace Part_6._5____RPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dollar {
+            get {
+                object obj = ResourceManager.GetObject("Dollar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NA {
             get {
                 object obj = ResourceManager.GetObject("NA", resourceCulture);

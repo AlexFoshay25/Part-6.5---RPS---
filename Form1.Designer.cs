@@ -34,8 +34,6 @@
             this.radScissor = new System.Windows.Forms.RadioButton();
             this.radPaper = new System.Windows.Forms.RadioButton();
             this.radRock = new System.Windows.Forms.RadioButton();
-            this.imgPlayer = new System.Windows.Forms.PictureBox();
-            this.imgOpponent = new System.Windows.Forms.PictureBox();
             this.btnGameStart = new System.Windows.Forms.Button();
             this.lblWin = new System.Windows.Forms.Label();
             this.lblWinBor = new System.Windows.Forms.Label();
@@ -50,7 +48,14 @@
             this.txtBetAmt = new System.Windows.Forms.TextBox();
             this.lblBettingAmt = new System.Windows.Forms.Label();
             this.lblMoneyTotal = new System.Windows.Forms.Label();
+            this.lblBankrupt = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgPlayer = new System.Windows.Forms.PictureBox();
+            this.imgOpponent = new System.Windows.Forms.PictureBox();
+            this.lblInfo2 = new System.Windows.Forms.Label();
             this.grpPlayerChoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.SuspendLayout();
@@ -123,26 +128,6 @@
             this.radRock.UseVisualStyleBackColor = true;
             this.radRock.CheckedChanged += new System.EventHandler(this.radRock_CheckedChanged);
             // 
-            // imgPlayer
-            // 
-            this.imgPlayer.Image = global::Part_6._5____RPS.Properties.Resources.questionmark;
-            this.imgPlayer.Location = new System.Drawing.Point(106, 99);
-            this.imgPlayer.Name = "imgPlayer";
-            this.imgPlayer.Size = new System.Drawing.Size(185, 205);
-            this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgPlayer.TabIndex = 1;
-            this.imgPlayer.TabStop = false;
-            // 
-            // imgOpponent
-            // 
-            this.imgOpponent.Image = global::Part_6._5____RPS.Properties.Resources.questionmark;
-            this.imgOpponent.Location = new System.Drawing.Point(504, 99);
-            this.imgOpponent.Name = "imgOpponent";
-            this.imgOpponent.Size = new System.Drawing.Size(187, 205);
-            this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgOpponent.TabIndex = 0;
-            this.imgOpponent.TabStop = false;
-            // 
             // btnGameStart
             // 
             this.btnGameStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,7 +143,7 @@
             // 
             this.lblWin.AutoSize = true;
             this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWin.Location = new System.Drawing.Point(331, 37);
+            this.lblWin.Location = new System.Drawing.Point(324, 37);
             this.lblWin.Name = "lblWin";
             this.lblWin.Size = new System.Drawing.Size(103, 33);
             this.lblWin.TabIndex = 6;
@@ -282,11 +267,76 @@
             this.lblMoneyTotal.TabIndex = 18;
             this.lblMoneyTotal.Text = "100";
             // 
+            // lblBankrupt
+            // 
+            this.lblBankrupt.AutoSize = true;
+            this.lblBankrupt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBankrupt.Location = new System.Drawing.Point(571, 53);
+            this.lblBankrupt.Name = "lblBankrupt";
+            this.lblBankrupt.Size = new System.Drawing.Size(167, 13);
+            this.lblBankrupt.TabIndex = 19;
+            this.lblBankrupt.Text = "----------------------------------------";
+            this.lblBankrupt.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(69, 53);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(167, 13);
+            this.lblInfo.TabIndex = 20;
+            this.lblInfo.Text = "----------------------------------------";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Part_6._5____RPS.Properties.Resources.Dollar;
+            this.pictureBox1.Location = new System.Drawing.Point(680, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imgPlayer
+            // 
+            this.imgPlayer.Image = global::Part_6._5____RPS.Properties.Resources.questionmark;
+            this.imgPlayer.Location = new System.Drawing.Point(106, 99);
+            this.imgPlayer.Name = "imgPlayer";
+            this.imgPlayer.Size = new System.Drawing.Size(185, 205);
+            this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPlayer.TabIndex = 1;
+            this.imgPlayer.TabStop = false;
+            // 
+            // imgOpponent
+            // 
+            this.imgOpponent.Image = global::Part_6._5____RPS.Properties.Resources.questionmark;
+            this.imgOpponent.Location = new System.Drawing.Point(504, 99);
+            this.imgOpponent.Name = "imgOpponent";
+            this.imgOpponent.Size = new System.Drawing.Size(187, 205);
+            this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgOpponent.TabIndex = 0;
+            this.imgOpponent.TabStop = false;
+            // 
+            // lblInfo2
+            // 
+            this.lblInfo2.AutoSize = true;
+            this.lblInfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo2.Location = new System.Drawing.Point(279, 409);
+            this.lblInfo2.Name = "lblInfo2";
+            this.lblInfo2.Size = new System.Drawing.Size(247, 15);
+            this.lblInfo2.TabIndex = 22;
+            this.lblInfo2.Text = "------------------------------------------------";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblInfo2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.lblBankrupt);
             this.Controls.Add(this.lblMoneyTotal);
             this.Controls.Add(this.lblBettingAmt);
             this.Controls.Add(this.txtBetAmt);
@@ -308,8 +358,10 @@
             this.Controls.Add(this.imgOpponent);
             this.Name = "Form1";
             this.Text = "Rock, Paper, Scissors";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpPlayerChoice.ResumeLayout(false);
             this.grpPlayerChoice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).EndInit();
             this.ResumeLayout(false);
@@ -341,6 +393,10 @@
         private System.Windows.Forms.TextBox txtBetAmt;
         private System.Windows.Forms.Label lblBettingAmt;
         private System.Windows.Forms.Label lblMoneyTotal;
+        private System.Windows.Forms.Label lblBankrupt;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblInfo2;
     }
 }
 
