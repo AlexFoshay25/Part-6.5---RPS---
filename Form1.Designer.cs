@@ -54,6 +54,7 @@
             this.imgPlayer = new System.Windows.Forms.PictureBox();
             this.imgOpponent = new System.Windows.Forms.PictureBox();
             this.lblInfo2 = new System.Windows.Forms.Label();
+            this.lblIntrustion = new System.Windows.Forms.Label();
             this.grpPlayerChoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
@@ -328,11 +329,21 @@
             this.lblInfo2.TabIndex = 22;
             this.lblInfo2.Text = "------------------------------------------------";
             // 
+            // lblIntrustion
+            // 
+            this.lblIntrustion.AutoSize = true;
+            this.lblIntrustion.Location = new System.Drawing.Point(327, 322);
+            this.lblIntrustion.Name = "lblIntrustion";
+            this.lblIntrustion.Size = new System.Drawing.Size(148, 13);
+            this.lblIntrustion.TabIndex = 23;
+            this.lblIntrustion.Text = "-- Place a bet before playing --";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblIntrustion);
             this.Controls.Add(this.lblInfo2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInfo);
@@ -397,6 +408,7 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblInfo2;
+        private System.Windows.Forms.Label lblIntrustion;
     }
 }
 
